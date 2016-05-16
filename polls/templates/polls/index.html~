@@ -7,7 +7,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    
     <meta name="description" content="Site sobre calculo 2b">
     <link rel="stylesheet" type="text/css" href="{% static 'assets/stylesheets/style.css' %}" />
   </head>
@@ -16,7 +15,6 @@
       <h1 class="float-l">
         <a href="#" title="Titulo do Site">Calculo 2b</a>
       </h1>
-      
       <nav class="float-r">
         <ul class="list-auto">
           <li>
