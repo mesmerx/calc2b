@@ -13,14 +13,18 @@
   <body>
     <header>
       <h1 class="float-l">
-        <a href="#" title="Titulo do Site">Calculo 2b</a>
+        <a href="http://{{ request.get_host }}" title="Titulo do Site">Calculo 2b</a>
       </h1>
       <nav class="float-r">
         <ul class="list-auto">
           <li>
             <a href="" title="tutoriais">Tutoriais</a>
-          </li>
-          <li>
+                <ul>
+                      <li><a href="/gnuplot">Gnuplot</a></li>                    
+                </ul>
+            </li>
+
+           <li>
             <a href="/tutoriais/" title="arquivos">Arquivos</a>
           </li>
           <li>
@@ -29,5 +33,6 @@
         </ul>
       </nav>
     </header>
-  </body>
+    {% block content %}{% endblock %}
+    </body>
 </html>

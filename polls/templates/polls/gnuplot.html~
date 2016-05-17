@@ -1,0 +1,37 @@
+{% extends "polls/index.html" %}
+{% block content %}
+{% load staticfiles %}
+
+<script>
+function openNav(con) {
+    document.getElementById("mySidenav"+con).style.width = "350px";
+}
+
+function closeNav(con) {
+    document.getElementById("mySidenav"+con).style.width = "0";
+}
+</script>
+<section>
+ <div id="mySidenav1" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav(1)">&times;</a>
+  <a href="#">instalação windows</a>
+  <a href="#">instalação linux</a>
+  <a href="#">instalação OS X</a>
+</div>
+ <div id="mySidenav2" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav(2)">&times;</a>
+  <a href="#">a ser feito</a>
+
+</div>
+
+<!-- Use any element to open the sidenav -->
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+Menu
+<br>
+<span onclick="openNav(1)">Basico |</span>
+<span onclick="openNav(2)">avançado</span>
+
+</div></section>
+  {% endblock %}

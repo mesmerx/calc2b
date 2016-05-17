@@ -1,0 +1,11 @@
+{% extends "polls/index.html" %}
+{% block content %}
+{% load staticfiles %}
+
+<section>
+    Esse site tem o proposito, de ajudar complementar os estudos do calculo 2b, não deve ser usado de forma nenhuma como fonte principal de informação, nele mostraremos como utilizar os principais programas computacionais para plotagem(grafico) e como tratar cada tipo diferente de função
+    </section>
+    <div>
+    <img src="{% static 'assets/images/teste2.png' %}"/> 
+  </div>
+  {% endblock %}

@@ -13,15 +13,19 @@
   <body>
     <header>
       <h1 class="float-l">
-        <a href="#" title="Titulo do Site">Calculo 2b</a>
+        <a href="{{ request.get_host }}" title="Titulo do Site">Calculo 2b</a>
       </h1>
       <nav class="float-r">
         <ul class="list-auto">
           <li>
             <a href="" title="tutoriais">Tutoriais</a>
-          </li>
-          <li>
-            <a href="" title="arquivos">Arquivos</a>
+                <ul>
+                      <li><a href="/gnuplot">Gnuplot</a></li>                    
+                </ul>
+            </li>
+
+           <li>
+            <a href="/tutoriais/" title="arquivos">Arquivos</a>
           </li>
           <li>
             <a href="" title="exemplos">exemplos de graficos</a>
@@ -29,5 +33,6 @@
         </ul>
       </nav>
     </header>
-  </body>
+    {% block content %}{% endblock %}
+    </body>
 </html>
