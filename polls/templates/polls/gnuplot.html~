@@ -3,7 +3,7 @@
 {% load staticfiles %}
 <div class="page">escolha abaixo qual categoria e subcategoria quer acessar:</div>
 <div>
-<ul class="menu2">
+<ul class="menu">
     <li><a href="#">instalação  
         <ul>
             <li><a href="#">Linux</a></li>

@@ -13,7 +13,7 @@
   <body>
     <div class="top">
      <ul class="menu">
-        <li><a href="#">Home</a></li>
+        <li><a href="">Home</a></li>
         <li><a href="#">Tutoriais</a>
          <ul>
                       <li><a href="gnuplot">Gnuplot</a></li>
