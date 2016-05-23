@@ -13,28 +13,15 @@
   <body>
     <div class="top">
      <ul class="menu">
-        <li><a href="">Home</a></li>
+        <li><a href="{% url 'index' %}">Home</a></li>
         <li><a href="#">Tutoriais</a>
          <ul>
-                      <li><a href="gnuplot">Gnuplot</a></li>
+                      <li><a href="{% url 'gnuplot' %}">Gnuplot</a></li>
                       <li><a href="#">SEO</a></li>
                       <li><a href="#">Design</a></li>                    
                 </ul></li>
         
-            <li><a href="#">O que fazemos?</a>
-                <ul>
-                      <li><a href="#">Web Design</a></li>
-                      <li><a href="#">SEO</a></li>
-                      <li><a href="#">Design</a></li>                    
-                </ul>
-            </li>
-        <li><a href="#">Links</a> <ul>
-                      <li><a href="#">Web Design</a></li>
-                      <li><a href="#">SEO</a></li>
-                      <li><a href="#">Design</a></li>                    
-                </ul>
-                </li>
-        <li><a href="#">Contato</a></li>                
+                  
 </ul>
 
     </div>
