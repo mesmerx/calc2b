@@ -5,7 +5,8 @@ from . import views
 urlpatterns = [
  # ex: /polls/
     url(r'^$', views.index, name='index'),
-    url(r'gnuplot', views.gnuplot, name='gnuplot'),
+    url(r'^gnuplot$', views.gnuplot, name='gnuplot'),
+    url(r'^gnuplot/windows$', views.gnuplotw, name='gnuplotw'),
 
 ]
 

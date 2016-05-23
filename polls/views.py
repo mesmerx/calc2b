@@ -11,4 +11,6 @@ def index(request):
     
 def gnuplot(request):
     return render(request, 'polls/gnuplot.html')
+def gnuplotw(request):
+    return render(request, 'polls/gnuplotwindows.html')
 

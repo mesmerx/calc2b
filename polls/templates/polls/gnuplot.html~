@@ -3,11 +3,11 @@
 {% load staticfiles %}
 <div class="page">escolha abaixo qual categoria e subcategoria quer acessar:</div>
 <div>
-<ul class="menu">
+<ul class="menu2">
     <li><a href="#">instalação  
         <ul>
             <li><a href="#">Linux</a></li>
-            <li><a href="#">Windows</a></li>
+            <li><a href="windows">Windows</a></li>
             <li><a href="#">OS X</a></li>
         </ul>
     </li>
@@ -24,3 +24,4 @@
     </ul>
     </div>
   {% endblock %}
+    {% block content2 %}{% endblock %}

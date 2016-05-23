@@ -1,7 +1,7 @@
 {% extends "polls/gnuplot.html" %}
 {% block content2 %}
 {% load staticfiles %}
-<div style="font-size:30px;text-align:center">Primeiro passo:</div>
+<div style="font-size:30px">Primeiro passo:</div>
 <div><br> baixe o programa: 
 <br>ou direto:<a href="https://sourceforge.net/projects/gnuplot/files/gnuplot/5.0.3/gp503-win32-mingw.exe/download"> aqui</a>
 <br>ou pelo site :<a href="http://www.gnuplot.info/download.html">aqui</a></div>
