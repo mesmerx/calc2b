@@ -25,7 +25,7 @@ width: 97%;
 margin: 0 auto; 
 
 }
-.menu2{background:blue;}
+.menu2{background:green;}
 .menu li, .menu2 li{
 position:relative; 
 float:left;
