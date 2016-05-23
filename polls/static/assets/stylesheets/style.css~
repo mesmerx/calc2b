@@ -17,8 +17,9 @@ list-style:none;
 border:0px solid #c0c0c0; 
 float:left; 
 height:100%;
-width:100%;
 margin:0px;
+width: 100%;
+margin: 0 auto; 
 
 }
 
