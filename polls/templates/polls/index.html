@@ -11,28 +11,33 @@
     <link rel="stylesheet" type="text/css" href="{% static 'assets/stylesheets/style.css' %}" />
   </head>
   <body>
-    <header>
-      <h1 class="float-l">
-        <a href="http://{{ request.get_host }}" title="Titulo do Site">Calculo 2b</a>
-      </h1>
-      <nav class="float-r">
-        <ul class="list-auto">
-          <li>
-            <a href="" title="tutoriais">Tutoriais</a>
+    <div class="top">
+     <ul class="menu">
+        <li><a href="">Home</a></li>
+        <li><a href="#">Tutoriais</a>
+         <ul>
+                      <li><a href="gnuplot">Gnuplot</a></li>
+                      <li><a href="#">SEO</a></li>
+                      <li><a href="#">Design</a></li>                    
+                </ul></li>
+        
+            <li><a href="#">O que fazemos?</a>
                 <ul>
-                      <li><a href="/gnuplot">Gnuplot</a></li>                    
+                      <li><a href="#">Web Design</a></li>
+                      <li><a href="#">SEO</a></li>
+                      <li><a href="#">Design</a></li>                    
                 </ul>
             </li>
+        <li><a href="#">Links</a> <ul>
+                      <li><a href="#">Web Design</a></li>
+                      <li><a href="#">SEO</a></li>
+                      <li><a href="#">Design</a></li>                    
+                </ul>
+                </li>
+        <li><a href="#">Contato</a></li>                
+</ul>
 
-           <li>
-            <a href="/tutoriais/" title="arquivos">Arquivos</a>
-          </li>
-          <li>
-            <a href="" title="exemplos">exemplos de graficos</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    </div>
     {% block content %}{% endblock %}
     </body>
 </html>
