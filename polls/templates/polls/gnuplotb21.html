@@ -1,0 +1,140 @@
+{% extends "polls/gnuplot.html" %}
+{% block content2 %}
+{% load staticfiles %}
+<div style="margin-top:60px;">
+    Uma das ferramentas principais e basicas de qualquer plotagem é a manipulação de graficos isso nós chamamos de "plotar" um grafico
+</div>
+
+<h3>Plotagem direta</h3>
+
+<p>
+    Aqui com plotagem direta queremos dizer plotagem de uma função definita diretamente, masi a frente vamos aprender a gerar uma variavel e nessa variavel fazer a protagem 
+</p>
+
+<p>dentro do GNUPLOT rode <br>
+
+</p>
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> plot ~função~ </p>
+    </code></pre>
+  </div>
+
+por exemplo:
+
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> plot sin(x) </p>
+    </code></pre>
+  </div>
+(obs: tem q ser em ingles se for usar função senoidal)
+<h3>Resultado:</h3>
+<br><img src="http://{{ request.get_host }}/polls/static/assets/images/plotb211.png"/> 
+
+<h3>Ajeitando o grafico</h3>
+
+<p>
+Agora que já sabemos plotar, podemos ajeitar também os eixos X e Y, para isso usamos <code>xrange</code> e <code>yrange</code> , vamos "setar" ela, ou sejá vamos definir algumas variaveis do programa
+  
+</p>
+
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> set xrange[min:max] </p>
+    </code></pre>
+  </div>
+
+
+por exemplo:
+
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> set xrange[2:5]<br>
+gnuplot> gnuplot> plot sin(x) </p>
+    </code></pre>
+  </div>
+  
+gera
+
+<br><br><img src="http://{{ request.get_host }}/polls/static/assets/images/plotb212.png"/> 
+
+<br><br>
+o mesmo pode ser obtido fazendo plot [x] [y] função exemplo:
+
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    gnuplot> gnuplot> plot [2:5] sin(x) 
+    gnuplot> gnuplot> plot [x=2:5] sin(x) 
+    </code></pre>
+  </div>
+<h3>Instale freetype</h3>
+
+<p>
+Download e instale  <a href="http://freetype.sourceforge.net/download.html#stable" title="http://freetype.sourceforge.net/download.html#stable">freetype</a>
+Usando esse link:
+<a href="http://download.savannah.gnu.org/releases/freetype/freetype-2.4.10.tar.gz" title="http://download.savannah.gnu.org/releases/freetype/freetype-2.4.10.tar.gz">http://download.savannah.gnu.org/releases/freetype/freetype-2.4.10.tar.gz</a>
+</p>
+
+<p></p>
+<p>
+</p><pre style="margin-left:4em">macuser:~/Downloads$ cd freetype-2.4.10
+macuser:~/Downloads/freetype-2.4.10$ ./configure
+macuser:~/Downloads/freetype-2.4.10$ make
+macuser:~/Downloads/freetype-2.4.10$ sudo make install
+</pre>
+<p></p>
+
+<h3>Instale libgd</h3>
+
+<p>
+Download e instale  <a href="http://www.boutell.com/gd/" title="http://www.boutell.com/gd/">libgd</a>
+using this link:
+<a href="http://www.boutell.com/gd/http/gd-2.0.33.tar.gz" title="http://www.boutell.com/gd/http/gd-2.0.33.tar.gz">http://www.boutell.com/gd/http/gd-2.0.33.tar.gz</a>
+</p>
+
+<p></p>
+<p>
+</p><pre style="margin-left:4em">macuser:~/Downloads$ cd gd-2.0.33
+macuser:~/Downloads/gd-2.0.33$ ./configure
+macuser:~/Downloads/gd-2.0.33$ make
+macuser:~/Downloads/gd-2.0.33$ sudo make install
+</pre>
+<p></p>
+
+<h3>Instale Gnuplot</h3>
+
+<p>
+Download e instale  <a href="http://sourceforge.net/projects/gnuplot/files/" title="http://sourceforge.net/projects/gnuplot/files/">Gnuplot</a>
+</p>
+
+<p></p>
+<p>
+Nota o <code>--with-readline=builtin</code> no arquivo de configuração -
+o arquivo INSTALL explica o porque dele estar ai.
+</p>
+
+<p></p>
+<p>
+</p><pre style="margin-left:4em">macuser:~/Downloads$ cd gnuplot-4.6.0
+macuser:~/Downloads/gnuplot-4.6.0$ ./configure --with-readline=builtin
+macuser:~/Downloads/gnuplot-4.6.0$ make
+macuser:~/Downloads/gnuplot-4.6.0$ sudo make install
+</pre>
+<p></p>
+
+<p></p>
+<p>
+teste seu gnuplot usando um terminal:
+</p>
+
+<p></p>
+<p>
+</p><pre style="margin-left:4em">macuser:~ gnuplot
+gnuplot&gt;  plot sin(x)
+
+{% endblock %}

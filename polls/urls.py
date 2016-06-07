@@ -9,5 +9,6 @@ urlpatterns = [
     url(r'^gnuplot/windows$', views.gnuplotw, name='gnuplotw'),
     url(r'^gnuplot/linux$', views.gnuplotl, name='gnuplotl'),
     url(r'^gnuplot/osx$', views.gnuploto, name='gnuploto'),
+    url(r'^gnuplot/basicor2_1$', views.gnuplotb21, name='gnuplotb21'),
 ]
 

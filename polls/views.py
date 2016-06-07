@@ -17,4 +17,6 @@ def gnuplotl(request):
     return render(request, 'polls/gnuplotlinux.html')
 def gnuploto(request):
     return render(request, 'polls/gnuplotosx.html')
+def gnuplotb21(request):
+    return render(request, 'polls/gnuplotb21.html')
 

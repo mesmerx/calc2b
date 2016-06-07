@@ -13,8 +13,8 @@ def gnuplot(request):
     return render(request, 'polls/gnuplot.html')
 def gnuplotw(request):
     return render(request, 'polls/gnuplotwindows.html')
-def gnuplotw(request):
-    return render(request, 'polls/gnuplotwindows.html')
-def gnuplotw(request):
-    return render(request, 'polls/gnuplotwindows.html')
+def gnuplotl(request):
+    return render(request, 'polls/gnuplotlinux.html')
+def gnuploto(request):
+    return render(request, 'polls/gnuplotosx.html')
 
