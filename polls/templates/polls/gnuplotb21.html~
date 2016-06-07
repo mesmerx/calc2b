@@ -89,8 +89,6 @@ exemplo:</p>
 
 <h3>algumas funções internas</h3>
 
-
-
 </p><pre>      __________________________________________________________
       Function            Returns
       -----------      ------------------------------------------
@@ -118,6 +116,7 @@ exemplo:</p>
       Bessel, gamma, ibeta, igamma, e lgamma também são supportados.  
       Muitas dessas funções aceitam argumentos complexos.
       Binarios e logicos também são aceitos.  
+(obs: elevado deve ser feito com ** não com ^)
 </pre>
 
 <p>

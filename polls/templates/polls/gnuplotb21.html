@@ -119,51 +119,6 @@ exemplo:</p>
 (obs: elevado deve ser feito com ** não com ^)
 </pre>
 
-<p>
-<p>
-Download e instale  <a href="http://www.boutell.com/gd/" title="http://www.boutell.com/gd/">libgd</a>
-using this link:
-<a href="http://www.boutell.com/gd/http/gd-2.0.33.tar.gz" title="http://www.boutell.com/gd/http/gd-2.0.33.tar.gz">http://www.boutell.com/gd/http/gd-2.0.33.tar.gz</a>
-</p>
 
-<p></p>
-<p>
-</p><pre style="margin-left:4em">macuser:~/Downloads$ cd gd-2.0.33
-macuser:~/Downloads/gd-2.0.33$ ./configure
-macuser:~/Downloads/gd-2.0.33$ make
-macuser:~/Downloads/gd-2.0.33$ sudo make install
-</pre>
-<p></p>
-
-<h3>Instale Gnuplot</h3>
-
-<p>
-Download e instale  <a href="http://sourceforge.net/projects/gnuplot/files/" title="http://sourceforge.net/projects/gnuplot/files/">Gnuplot</a>
-</p>
-
-<p></p>
-<p>
-Nota o <code>--with-readline=builtin</code> no arquivo de configuração -
-o arquivo INSTALL explica o porque dele estar ai.
-</p>
-
-<p></p>
-<p>
-</p><pre style="margin-left:4em">macuser:~/Downloads$ cd gnuplot-4.6.0
-macuser:~/Downloads/gnuplot-4.6.0$ ./configure --with-readline=builtin
-macuser:~/Downloads/gnuplot-4.6.0$ make
-macuser:~/Downloads/gnuplot-4.6.0$ sudo make install
-</pre>
-<p></p>
-
-<p></p>
-<p>
-teste seu gnuplot usando um terminal:
-</p>
-
-<p></p>
-<p>
-</p><pre style="margin-left:4em">macuser:~ gnuplot
-gnuplot&gt;  plot sin(x)
 
 {% endblock %}
