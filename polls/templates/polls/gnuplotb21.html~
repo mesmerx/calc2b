@@ -63,7 +63,7 @@ gera
 <br><br><img src="http://{{ request.get_host }}/polls/static/assets/images/plotb212.png"/> 
 
 <br><br>
-o mesmo pode ser obtido fazendo plot [x] [y] função explo:
+o mesmo pode ser obtido fazendo plot [x] [y] função exemplo:
 
 <div class="codeheader" id="codeheader_html">{{ html }}</div>
   <div id="codebox">
@@ -72,25 +72,55 @@ o mesmo pode ser obtido fazendo plot [x] [y] função explo:
     gnuplot> gnuplot> plot [x=2:5] sin(x) 
     </code></pre>
   </div>
-<h3>Instale freetype</h3>
+<h3>Definir funções</h3>
 
-<p>
-Download e instale  <a href="http://freetype.sourceforge.net/download.html#stable" title="http://freetype.sourceforge.net/download.html#stable">freetype</a>
-Usando esse link:
-<a href="http://download.savannah.gnu.org/releases/freetype/freetype-2.4.10.tar.gz" title="http://download.savannah.gnu.org/releases/freetype/freetype-2.4.10.tar.gz">http://download.savannah.gnu.org/releases/freetype/freetype-2.4.10.tar.gz</a>
-</p>
+<p>muitas vezes não queremos escrever todas as funções na plotagem, ou temos uma função recorrente, para isso nós vamos setar uma função f(x), fazemos escrevendo f(x) = função   (espaço entre o = f(x) e a função é importante)
+exemplo:</p>
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    gnuplot> gnuplot> f(x) = sin(x) 
+    gnuplot> gnuplot> plot f(x) 
+    </code></pre>
+  </div>
 
-<p></p>
-<p>
-</p><pre style="margin-left:4em">macuser:~/Downloads$ cd freetype-2.4.10
-macuser:~/Downloads/freetype-2.4.10$ ./configure
-macuser:~/Downloads/freetype-2.4.10$ make
-macuser:~/Downloads/freetype-2.4.10$ sudo make install
+
+<br><br><img src="http://{{ request.get_host }}/polls/static/assets/images/plotb213.png"/> 
+
+<h3>algumas funções internas</h3>
+
+
+
+</p><pre>      __________________________________________________________
+      Function            Returns
+      -----------      ------------------------------------------
+      abs(x)            valor absoluto de x, |x|
+      acos(x)           arc-cosseno de x
+      asin(x)           arc-seno    de x  
+      atan(x)           arc-tangente de x
+      cos(x)            cosseno      de x,  x em radianos.
+      cosh(x)           cosseno hyperbolico de x, x em radianos
+      erf(x)            função erro de x
+      exp(x)            função exponencial de x, base e
+      inverf(x)         função inversa do erro de x
+      invnorm(x)        função inversa da distribuição de x
+      log(x)            log de x, base e
+      log10(x)          log de x, base 10
+      norm(x)           distruição gaussiana normal
+      rand(x)           gerador de números pseudo-aleatorios      
+      sgn(x)            1 se x &gt; 0, -1 se x &lt; 0, 0 se x=0
+      sin(x)            seno      de x, x em radianos
+      sinh(x)           seno hyperbolico de x, x em radianos
+      sqrt(x)           raiz quadrada de x
+      tan(x)            tangente de x, x em radianos
+      tanh(x)           tangente  hyperbolico de x, x em radianos
+      ___________________________________________________________
+      Bessel, gamma, ibeta, igamma, e lgamma também são supportados.  
+      Muitas dessas funções aceitam argumentos complexos.
+      Binarios e logicos também são aceitos.  
 </pre>
-<p></p>
 
-<h3>Instale libgd</h3>
-
+<p>
 <p>
 Download e instale  <a href="http://www.boutell.com/gd/" title="http://www.boutell.com/gd/">libgd</a>
 using this link:
