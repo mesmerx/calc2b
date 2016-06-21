@@ -11,12 +11,12 @@
             <li><a href="{% url 'gnuploto' %}">OS X</a></li>
         </ul>
     </li>
-    <li><a href="#">basico R² </a>
+    <li><a href="#">R → R </a>
         <ul>
             <li><a href="{% url 'gnuplotb21' %}">plotar uma função</a></li>
         </ul>
     </li>
-    <li><a href="#">basico R³</a>
+    <li><a href="#">R²  → R³</a>
         <ul>
             <li><a href="{% url 'gnuplotb31' %}">plotar uma função</a></li>
         
@@ -27,7 +27,9 @@
         <ul>
             <li><a href="{% url 'gnuplota1' %}">multiplot</a></li>
             <li><a href="{% url 'gnuplota2' %}">função parametrica</a></li>
-            
+            <li><a href="{% url 'gnuplota3' %}">modificações em grafico</a></li>
+            <li><a href="{% url 'gnuplota4' %}">rotinas e definições de variveis</a></li>
+        
         </ul>
         
     </li>
