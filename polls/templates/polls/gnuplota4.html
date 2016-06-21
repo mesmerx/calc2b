@@ -1,0 +1,119 @@
+{% extends "polls/gnuplot.html" %}
+{% block content2 %}
+{% load staticfiles %}
+<div style="margin-top:60px;">
+    Em muitos casos qeuremos desenhar muitas funções dentro de um mesmo grafico, isso pode ser facilmente feito com o uso de virgulas em ambos casos
+</div>
+
+<h3>Plotagem direta</h3>
+
+<p>
+    Aqui com plotagem direta queremos dizer plotagem de uma função definita diretamente, mais a frente vamos aprender a gerar uma variavel e nessa variavel fazer a protagem 
+</p>
+
+<p>dentro do GNUPLOT rode <br>
+
+</p>
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> splot ~função~ </p>
+    </code></pre>
+  </div>
+
+por exemplo:
+
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> splot sin(x) </p>
+    </code></pre>
+  </div>
+(obs: tem q ser em ingles se for usar função senoidal)
+<h3>Resultado:</h3>
+<br><img src="http://{{ request.get_host }}/polls/static/assets/images/plotb311.png"/> 
+
+<p>Claro como estamos em R³ podemos usar mais variaveis nesse grafico <br>
+
+</p>
+por exemplo:
+
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> splot sin(x*y) </p>
+    </code></pre>
+  </div>
+(obs: tem q ser em ingles se for usar função senoidal)
+<h3>Resultado:</h3>
+<br><img src="http://{{ request.get_host }}/polls/static/assets/images/plotb312.png"/> 
+</p>
+
+</p>
+esse grafico está claramente ruim, e deve ser melhorado mais a frente
+</p>
+<h3>Ajeitando o grafico (basico)</h3>
+
+<p>
+Os eixos X, Y e Z são ajeitados de maneira similar ao em R² usando <code>xrange</code> , <code>yrange</code> e <code>zrange</code>
+  
+</p>
+
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> set xrange[min:max]<br>
+gnuplot> set yrange[min:max]<br>
+gnuplot> set zrange[min:max] </p>
+    </code></pre>
+  </div>
+
+
+por exemplo:
+
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> set xrange[2:5]<br>
+gnuplot> set yrange[2:5]<br>
+gnuplot> set zrange[-5:5]<br>
+gnuplot> gnuplot> splot sin(x*y) </p>
+    </code></pre>
+  </div>
+  
+gera
+
+<br><br><img src="http://{{ request.get_host }}/polls/static/assets/images/plotb313.png"/> 
+
+<br><br>
+perceba que esse grafico está muito mais bonito, por mais que ainda deva ter mudanças
+
+<h3>Definir funções</h3>
+
+<p>a definição de funções ocorre muito parecida com a em R², porem agora podemos utilizar sem definir explicitamente as variaveis x e y (obs: xy=/=x*y, xy não é entendido, pois xy é uma variavel nova, x*y é entendido como X vezes Y) </p>
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    gnuplot> gnuplot> f(x,y) = sin(x*y) 
+    gnuplot> gnuplot> splot f(x,y) 
+    </code></pre>
+  </div>
+
+
+<br><br><img src="http://{{ request.get_host }}/polls/static/assets/images/plotb314.png"/> 
+
+perceba que podemos utilizar funções como no caso de r²
+
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    gnuplot> gnuplot> f(x) = sin(x) 
+    gnuplot> gnuplot> splot f(x) 
+    </code></pre>
+  </div>
+
+
+<br><br><img src="http://{{ request.get_host }}/polls/static/assets/images/plotb315.png"/> 
+
+
+{% endblock %}

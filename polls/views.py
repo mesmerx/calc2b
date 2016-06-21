@@ -19,4 +19,14 @@ def gnuploto(request):
     return render(request, 'polls/gnuplotosx.html')
 def gnuplotb21(request):
     return render(request, 'polls/gnuplotb21.html')
+def gnuplotb31(request):
+    return render(request, 'polls/gnuplotb31.html')
+def gnuplota1(request):
+    return render(request, 'polls/gnuplota1.html')
+def gnuplota2(request):
+    return render(request, 'polls/gnuplota2.html')
+def gnuplota3(request):
+    return render(request, 'polls/gnuplota3.html')
+def gnuplota4(request):
+    return render(request, 'polls/gnuplota4.html')
 

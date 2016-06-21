@@ -13,16 +13,26 @@
     </li>
     <li><a href="#">basico R² </a>
         <ul>
-            <li><a href="#">plotar uma função</a></li>
+            <li><a href="{% url 'gnuplotb21' %}">plotar uma função</a></li>
         </ul>
     </li>
-    <li><a href="#">basico</a>  
+    <li><a href="#">basico R³</a>
         <ul>
-            <li><a href="#">basico</a></li>
+            <li><a href="{% url 'gnuplotb31' %}">plotar uma função</a></li>
+        
         </ul>
+        
     </li>
-    </ul>
-    </div>
+    <li><a href="#">avançado</a>
+        <ul>
+            <li><a href="{% url 'gnuplota1' %}">multiplot</a></li>
+            <li><a href="{% url 'gnuplota2' %}">função parametrica</a></li>
+            
+        </ul>
+        
+    </li>
+</ul>
+</div>
     {% block content2 %}{% endblock %}
   {% endblock %}
 

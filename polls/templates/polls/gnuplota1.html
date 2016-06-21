@@ -1,0 +1,71 @@
+{% extends "polls/gnuplot.html" %}
+{% block content2 %}
+{% load staticfiles %}
+<div style="margin-top:60px;">
+    Em muitos casos queremos desenhar muitas funções dentro de um mesmo grafico, isso pode ser facilmente feito com o uso de virgulas
+</div>
+</p>
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> plot ~função~, ~função2~ </p>
+    </code></pre>
+  </div>
+
+por exemplo:
+
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> plot sin(x),cos(x) </p>
+    </code></pre>
+  </div>
+<h3>Resultado:</h3>
+<br><img src="http://{{ request.get_host }}/polls/static/assets/images/plota1.png"/> 
+
+<p>Claro podemos fazer o mesmo para splot <br>
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> splot sin(x),cos(x) </p>
+    </code></pre>
+  </div>
+<h3>Resultado:</h3>
+<br><img src="http://{{ request.get_host }}/polls/static/assets/images/plota2.png"/> 
+
+</p>
+o problema começa quando ou as funções são muito complexas, ou temos que ter alguma edição especial em alguma função especifica, nesses casos plotar diretamente desse modo não resolve o problema, para isso temos o <code>
+multiplot</code>, que é uma ferramenta poderosa, porem tem seus problemas <b> não podemos mecher no grafico interativamente usando mouse</b> pois esse modo de multiplot "estampa a função"</p>
+<h3>Multiplot</h3>
+
+<p>
+para usar o multiplot devemos ir no gnuplot e aplicar
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> set multiplot<br>
+multiplot> <br>
+    </code></pre>
+  </div>
+
+
+logo que estiver nesse modo, todo e qualquer plot que for feito, vai ser "estampado" no grafico atual
+
+<div class="codeheader" id="codeheader_html">{{ html }}</div>
+  <div id="codebox">
+    <pre><code data-language="html">
+    <p>gnuplot> set multiplot<br>
+multiplot> splot x**2<br>
+multiplot> splot sin(x)<br>
+    </code></pre>
+  </div>
+  
+gera
+
+<br><br><img src="http://{{ request.get_host }}/polls/static/assets/images/plota3.png"/> 
+
+<br><br>
+se quiser "limpar" todos os plots ja feitos, pode ser usado o comando "clear"
+
+
+{% endblock %}
