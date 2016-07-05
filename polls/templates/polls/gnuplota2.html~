@@ -87,24 +87,6 @@ gnuplot> plot [0:10*pi] t*sin(t),t*cos(t)
    </code></pre></p>
   </div>
 <br><img src="http://{{ request.get_host }}/polls/static/assets/images/sampleQ3.3.png"/> 
-<pre>
-
-Esse exemplo mostra r(t)=const*(1+cos(t)), que se chama Cardioid.
-</pre>
-<div class="codeheader" id="codeheader_html">{{ html }}</div>
-  <div id="codebox">
-  <p>
-    <pre><code data-language="html">
-
-gnuplot> set parametric
-
-	dummy variable is t for curves, u/v for surfaces
-gnuplot> r(t) = 1+cos(t)
-gnuplot> plot [0:2*pi] r(t)*cos(t),r(t)*sin(t)
-   </code></pre></p>
-  </div>
-<br><img src="http://{{ request.get_host }}/polls/static/assets/images/sampleQ3.4.png"/> 
-
   
   </pre>
 

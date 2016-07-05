@@ -16,7 +16,7 @@
             <li><a href="{% url 'gnuplotb21' %}">plotar uma função</a></li>
         </ul>
     </li>
-    <li><a href="#">R²  → R³</a>
+    <li><a href="#">R²  → R</a>
         <ul>
             <li><a href="{% url 'gnuplotb31' %}">plotar uma função</a></li>
         
