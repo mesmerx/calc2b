@@ -1,0 +1,132 @@
+[intro]
+Uma das ferramentas principais e basicas de qualquer plotagem é a manipulação de graficos isso nós chamamos de "plotar" um grafico
+[/intro]
+
+[titulo]
+Plotagem direta
+[/titulo]
+
+[texto]
+Aqui com plotagem direta queremos dizer plotagem de uma função definita diretamente, masi a frente vamos aprender a gerar uma variavel e nessa variavel fazer a protagem 
+
+dentro do GNUPLOT rode 
+
+[/texto]
+
+[caixac]
+gnuplot > plot ~função~
+[/caixac]
+
+[texto]
+
+por exemplo
+
+[/texto]
+
+[caixac]
+gnuplot > plot sin(x)
+[/caixac]
+
+[texto]
+(obs: tem q ser em ingles se for usar função senoidal)
+[/texto]
+
+[titulo]
+Resultado:
+[titulo]
+
+[img]
+http://calc2b.pythonanywhere.com/polls/static/assets/images/plotb211.png
+[/img]
+
+[titulo]
+Ajeitando o grafico
+[/titulo]
+
+[texto]
+Agora que já sabemos plotar, podemos ajeitar também os eixos X e Y, para isso usamos [codigo]xrange<[/codigo] e [codigo]yrange[/codigo] , vamos "setar" ela, ou sejá vamos definir algumas variaveis do programa
+
+[/texto]
+
+[caixac]
+gnuplot > set xrange[min:max]
+[/caixac]
+
+[texto]
+
+por exemplo
+
+[/texto]
+
+[caixac]
+gnuplot > set xrange[2:5]
+[/caixac]
+
+[texto]
+
+
+gera 
+
+
+[/texto]
+
+
+[img]http://calc2b.pythonanywhere.com/polls/static/assets/images/plotb212.png[/img] 
+
+[texto]
+o mesmo pode ser obtido fazendo plot [x] [y] função exemplo:
+[/texto]
+[caixac]
+gnuplot> gnuplot> plot [2:5] sin(x) 
+gnuplot> gnuplot> plot [x=2:5] sin(x) 
+[/caixac]
+</div>
+[titulo]Definir funções[/titulo]
+
+[texto
+muitas vezes não queremos escrever todas as funções na plotagem, ou temos uma função recorrente, para isso nós vamos setar uma função f(x), fazemos escrevendo f(x) = função   (espaço entre o = f(x) e a função é importante)
+exemplo:
+[/texto]
+
+[caixac]
+gnuplot> gnuplot> f(x) = sin(x) 
+gnuplot> gnuplot> plot f(x) 
+[/caixac]
+</div>
+
+[img]http://calc2b.pythonanywhere.com/polls/static/assets/images/plotb213.png[/img] 
+
+[titulo]algumas funções internas[/titulo]
+
+[texto]      __________________________________________________________
+Function            Returns
+-----------      ------------------------------------------
+abs(x)            valor absoluto de x, |x|
+acos(x)           arc-cosseno de x
+asin(x)           arc-seno    de x  
+atan(x)           arc-tangente de x
+cos(x)            cosseno      de x,  x em radianos.
+cosh(x)           cosseno hyperbolico de x, x em radianos
+erf(x)            função erro de x
+exp(x)            função exponencial de x, base e
+inverf(x)         função inversa do erro de x
+invnorm(x)        função inversa da distribuição de x
+log(x)            log de x, base e
+log10(x)          log de x, base 10
+norm(x)           distruição gaussiana normal
+rand(x)           gerador de números pseudo-aleatorios      
+sgn(x)            1 se x &gt; 0, -1 se x &lt; 0, 0 se x=0
+sin(x)            seno      de x, x em radianos
+sinh(x)           seno hyperbolico de x, x em radianos
+sqrt(x)           raiz quadrada de x
+tan(x)            tangente de x, x em radianos
+tanh(x)           tangente  hyperbolico de x, x em radianos
+___________________________________________________________
+Bessel, gamma, ibeta, igamma, e lgamma também são supportados.  
+Muitas dessas funções aceitam argumentos complexos.
+Binarios e logicos também são aceitos.  
+(obs: elevado deve ser feito com ** não com ^)
+[/texto]
+
+
+
