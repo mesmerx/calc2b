@@ -1,0 +1,108 @@
+{% extends "polls/gnuplot.html" %}
+{% block content2 %}
+{% load staticfiles %}
+[intro]
+    Utilizaremos abordagens parecidas com plotagem em R² se não está familiarizado com ela olhe <a href="{% url 'gnuplotb21' %}">plotar uma função em R²</a>, não veremos como suavizar ou deixar esse grafico mais "bonito" isso está na sessão avançada"
+[/intro]
+
+[titulo]Plotagem direta[/titulo]
+
+[texto]
+    Aqui com plotagem direta queremos dizer plotagem de uma função definita diretamente, mais a frente vamos aprender a gerar uma variavel e nessa variavel fazer a protagem 
+[/texto]
+
+[texto]dentro do GNUPLOT rode [/texto]
+
+[caixac]
+    gnuplot> splot ~função~ 
+ [/caixac]
+
+ [texto]
+por exemplo:
+[/texto]
+
+[caixac]
+  gnuplot> splot sin(x) [/texto]
+[/caixac]
+[texto]
+(obs: tem q ser em ingles se for usar função senoidal)
+[/texto]
+
+[titulo]Resultado:[/titulo]
+
+[img]http://{{ request.get_host }}/polls/static/assets/images/plotb311.png[/img] 
+
+[texto]Claro como estamos em R³ podemos usar mais variaveis nesse grafico <br>
+
+[/texto]
+por exemplo:
+
+[caixac]
+  <div id="codebox">
+    <pre><code data-language="html">
+    [texto]gnuplot> splot sin(x*y) [/texto]
+    [/codigo]</pre>
+  </div>
+(obs: tem q ser em ingles se for usar função senoidal)
+[titulo]Resultado:[/titulo]
+<br>[img]http://{{ request.get_host }}/polls/static/assets/images/plotb312.png[/img] 
+[/texto]
+
+[/texto]
+esse grafico está claramente ruim, e deve ser melhorado mais a frente
+[/texto]
+[titulo]Ajeitando o grafico (basico)[/titulo]
+
+[texto]
+Os eixos X, Y e Z são ajeitados de maneira similar ao em R² usando [codigo]xrange[/codigo] , [codigo]yrange[/codigo] e [codigo]zrange[/codigo]
+  
+[/texto]
+
+[caixac]
+  <div id="codebox">
+    <pre><code data-language="html">
+    [texto]gnuplot> set xrange[min:max]<br>
+gnuplot> set yrange[min:max]<br>
+gnuplot> set zrange[min:max] [/texto]
+    [/codigo]</pre>
+  </div>
+
+[texto]
+por exemplo:
+[/texto]
+
+[caixac]
+gnuplot> set xrange[2:5]<br>
+gnuplot> set yrange[2:5]<br>
+gnuplot> set zrange[-5:5]<br>
+gnuplot> gnuplot> splot sin(x*y) 
+[/caixac]
+
+[texto]gera[/texto]
+
+[img]http://{{ request.get_host }}/polls/static/assets/images/plotb313.png[/img] 
+
+perceba que esse grafico está muito mais bonito, por mais que ainda deva ter mudanças
+
+[titulo]Definir funções[/titulo]
+
+[texto]a definição de funções ocorre muito parecida com a em R², porem agora podemos utilizar sem definir explicitamente as variaveis x e y (obs: xy=/=x*y, xy não é entendido, pois xy é uma variavel nova, x*y é entendido como X vezes Y) [/texto]
+[caixac]
+    gnuplot> gnuplot> f(x,y) = sin(x*y) 
+    gnuplot> gnuplot> splot f(x,y) 
+[/caixac]
+
+[img]http://{{ request.get_host }}/polls/static/assets/images/plotb314.png[/img] 
+
+perceba que podemos utilizar funções como no caso de r²
+
+[caixac]
+    gnuplot> gnuplot> f(x) = sin(x) 
+    gnuplot> gnuplot> splot f(x) 
+[/caixac] 
+
+
+[img]http://{{ request.get_host }}/polls/static/assets/images/plotb315.png[/img] 
+
+
+{% endblock %}
