@@ -1,5 +1,5 @@
 [intro]
-Uma das ferramentas principais e basicas de qualquer plotagem ? a manipula??o de graficos isso n?s chamamos de "plotar" um grafico
+Uma das ferramentas principais e  de qualquer plotagem ? a manipula??o de graficos isso n?s chamamos de "plotar" um grafico
 [/intro]
 
 [titulo]
@@ -36,7 +36,7 @@ Resultado:
 [titulo]
 
 [img]
-http://calc2b.pythonanywhere.com/polls/static/assets/images/plotb211.png
+[site]/polls/static/assets/images/plotb211.png
 [/img]
 
 [titulo]
@@ -71,7 +71,7 @@ gera
 [/texto]
 
 
-[img]http://calc2b.pythonanywhere.com/polls/static/assets/images/plotb212.png[/img] 
+[img][site]/polls/static/assets/images/plotb212.png[/img] 
 
 [texto]
 o mesmo pode ser obtido fazendo plot [x] [y] fun??o exemplo:
@@ -80,7 +80,6 @@ o mesmo pode ser obtido fazendo plot [x] [y] fun??o exemplo:
 gnuplot> gnuplot> plot [2:5] sin(x) 
 gnuplot> gnuplot> plot [x=2:5] sin(x) 
 [/caixac]
-</div>
 [titulo]Definir fun??es[/titulo]
 
 [texto
@@ -92,9 +91,8 @@ exemplo:
 gnuplot> gnuplot> f(x) = sin(x) 
 gnuplot> gnuplot> plot f(x) 
 [/caixac]
-</div>
 
-[img]http://calc2b.pythonanywhere.com/polls/static/assets/images/plotb213.png[/img] 
+[img][site]/polls/static/assets/images/plotb213.png[/img] 
 
 [titulo]algumas fun??es internas[/titulo]
 

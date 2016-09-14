@@ -3,36 +3,26 @@
 {% load staticfiles %}
 <div class="page">escolha abaixo qual categoria e subcategoria quer acessar:</div>
 <div>
-<ul class="menu2">
-    <li><a href="#">instalação  
-        <ul>
-            <li><a href="{% url 'gnuplotl' %}">Linux</a></li>
-            <li><a href="{% url 'gnuplotw' %}">Windows</a></li>
-            <li><a href="{% url 'gnuploto' %}">OS X</a></li>
-        </ul>
+    <ul class="menu2">
+        <li>  <a href="#">instalação ->  
+        <a href="{% url 'gnuplotl' %}">Linux</a>
+        <a> | </a> <a href="{% url 'gnuplotw' %}">Windows</a>
+        <a> | </a> <a href="{% url 'gnuploto' %}">OS X</a>
     </li>
-    <li><a href="#">R → R </a>
-        <ul>
-            <li><a href="{% url 'gnuplotb21' %}">plotar um gráfico</a></li>
-        </ul>
-    </li>
-    <li><a href="#">R²  → R</a>
-        <ul>
-            <li><a href="{% url 'gnuplotb31' %}">plotar um gráfico</a></li>
-        
-        </ul>
-        
-    </li>
-    <li><a href="#">avançado</a>
-        <ul>
-            <li><a href="{% url 'gnuplota1' %}">multiplot</a></li>
-            <li><a href="{% url 'gnuplota2' %}">função parametrica</a></li>
-            <li><a href="{% url 'gnuplota3' %}">modificações em grafico</a></li>
-            <li><a href="{% url 'gnuplota4' %}">rotinas e definições de variveis</a></li>
-        
-        </ul>
-        
-    </li>
+        <li>  <a href="#">graficos ->  
+<a href="{% url 'gnuplotlimit' %}">limitações</a> <a>|</a>             
+<a href="{% url 'gnuplotdoiseixos' %}">dois eixos</a>  <a>|</a>
+<a href="{% url 'gnuplottreseixos' %}">três eixos</a> <a>|</a>
+<a href="{% url 'gnuplotmulti' %}">multi-grafico</a> <a>|</a>
+
+<a href="{% url 'gnuplotparametrica' %}">parametrica</a></li>
+        <li>
+<a href="#">recursos -></a>
+<a href="{% url 'gnuplotcondicionais' %}">condicionais</a><a>|</a>
+<a href="{% url 'gnuplotrepeticoes' %}">repetições</a><a>|</a>
+<a href="{% url 'gnuplotmacros' %}">macros</a><a>|</a>
+<a href="{% url 'gnuplotarquivos' %}">arquivos</a><a>|</a>
+</li>
 </ul>
 </div>
     {% block content2 %}{% endblock %}

@@ -30,7 +30,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+SITE_ID = 1
+
 INSTALLED_APPS = [
+    'django.contrib.sites',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',

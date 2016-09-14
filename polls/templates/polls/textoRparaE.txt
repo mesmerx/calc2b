@@ -1,3 +1,0 @@
-[intro]
-Uma das ferramentas principais e basicas de qualquer plotagem é a manipulação de graficos isso nós chamamos de "plotar" um grafico
-[/intro]

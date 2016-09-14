@@ -17,16 +17,21 @@ def gnuplotl(request):
     return render(request, 'polls/gnuplotlinux.html')
 def gnuploto(request):
     return render(request, 'polls/gnuplotosx.html')
-def gnuplotb21(request):
-    return render(request, 'polls/gnuplotb21.html')
-def gnuplotb31(request):
-    return render(request, 'polls/gnuplotb31.html')
-def gnuplota1(request):
-    return render(request, 'polls/gnuplota1.html')
-def gnuplota2(request):
-    return render(request, 'polls/gnuplota2.html')
-def gnuplota3(request):
-    return render(request, 'polls/gnuplota3.html')
-def gnuplota4(request):
-    return render(request, 'polls/gnuplota4.html')
-
+def gnuplotlimit(request):
+    return render(request, 'polls/gnuplotlimit.html')
+def gnuplotdoiseixos(request):
+    return render(request, 'polls/gnuplotdoiseixos.html')
+def gnuplottreseixos(request):
+    return render(request, 'polls/gnuplottreseixos.html')
+def gnuplotmulti(request):
+    return render(request, 'polls/gnuplotmultiplot.html')
+def gnuplotparametrica(request):
+    return render(request, 'polls/gnuplotparametrica.html')
+def gnuplotcondicionais(request):
+    return render(request, 'polls/gnuplotcondicionais.html')
+def gnuplotrepeticoes(request):
+    return render(request, 'polls/gnuplotrepeticoes.html')
+def gnuplotmacros(request):
+    return render(request, 'polls/gnuplotmacros.html')
+def gnuplotarquivos(request):
+    return render(request, 'polls/gnuplotarquivos.html')

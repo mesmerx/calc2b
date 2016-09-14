@@ -1,0 +1,8 @@
+{% extends "polls/gnuplot.html" %}
+{% block content2 %}
+{% load staticfiles %}
+{% load htmltags %}
+{{ "textoparametrica.txt"|ler|html|safe|escape}}
+{% endblock %}
+
+
