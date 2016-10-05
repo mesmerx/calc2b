@@ -35,3 +35,6 @@ def gnuplotmacros(request):
     return render(request, 'polls/gnuplotmacros.html')
 def gnuplotarquivos(request):
     return render(request, 'polls/gnuplotarquivos.html')
+
+def sagemath(request):
+    return render(request, 'polls/sagemath.html')

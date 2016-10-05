@@ -1,0 +1,7 @@
+{% extends "polls/gnuplot.html" %}
+{% block content2 %}
+{% load staticfiles %}
+{% load htmltags %}
+{{ "textolimit.txt"|ler|html|safe}}
+{% endblock %}
+

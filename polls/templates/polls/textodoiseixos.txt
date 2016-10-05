@@ -1,25 +1,24 @@
 [intro]
-Uma das ferramentas principais e  de qualquer plotagem ? a manipula??o de graficos isso n?s chamamos de "plotar" um grafico
+Uma das ferramentas principais e  de qualquer plotagem  a manipulação de gráficos isso nós chamamos de "plotar" um gráfico
 [/intro]
 
 [titulo]
-Plotagem direta
+Gráficos
 [/titulo]
 
 [texto]
-Aqui com plotagem direta queremos dizer plotagem de uma fun??o definita diretamente, masi a frente vamos aprender a gerar uma variavel e nessa variavel fazer a protagem 
-
-dentro do GNUPLOT rode 
+Existem duas formas, basicamente, de plotar o gráfico de uma função. No primeiro caso (que faremos agora) o comando "plot" vem seguido da expressão algébrica  que define a função. No segundo caso (apresentado depois) atribuímos a função é descrita como $f(x) = "fórmula", e a partir de então, o comando plot  se refere à f. 
+Dentro do GNUPLOT rode 
 
 [/texto]
 
 [caixac]
-gnuplot > plot ~fun??o~
+gnuplot > plot ~função~
 [/caixac]
 
 [texto]
 
-por exemplo
+Exemplo 1:
 
 [/texto]
 
@@ -28,7 +27,7 @@ gnuplot > plot sin(x)
 [/caixac]
 
 [texto]
-(obs: tem q ser em ingles se for usar fun??o senoidal)
+(obs: tem q ser em inglês se for usar função senoidal)
 [/texto]
 
 [titulo]
@@ -40,11 +39,11 @@ Resultado:
 [/img]
 
 [titulo]
-Ajeitando o grafico
+Ajustando Domínio e Imagem
 [/titulo]
 
 [texto]
-Agora que j? sabemos plotar, podemos ajeitar tamb?m os eixos X e Y, para isso usamos [codigo]xrange<[/codigo] e [codigo]yrange[/codigo] , vamos "setar" ela, ou sej? vamos definir algumas variaveis do programa
+Agora que já sabemos plotar, podemos ajeitar também os eixos X e Y, para isso usamos [codigo]xrange[/codigo] e [codigo]yrange[/codigo] , ou seja vamos definir algumas variáveis do programa
 
 [/texto]
 
@@ -54,7 +53,7 @@ gnuplot > set xrange[min:max]
 
 [texto]
 
-por exemplo
+Exemplo 2:
 
 [/texto]
 
@@ -65,7 +64,7 @@ gnuplot > set xrange[2:5]
 [texto]
 
 
-gera 
+Gera 
 
 
 [/texto]
@@ -74,17 +73,17 @@ gera
 [img][site]/polls/static/assets/images/plotb212.png[/img] 
 
 [texto]
-o mesmo pode ser obtido fazendo plot [x] [y] fun??o exemplo:
+o mesmo pode ser obtido fazendo plot [x] [y] função exemplo:
 [/texto]
 [caixac]
 gnuplot> gnuplot> plot [2:5] sin(x) 
 gnuplot> gnuplot> plot [x=2:5] sin(x) 
 [/caixac]
-[titulo]Definir fun??es[/titulo]
+[titulo]Definindo funções[/titulo]
 
-[texto
-muitas vezes n?o queremos escrever todas as fun??es na plotagem, ou temos uma fun??o recorrente, para isso n?s vamos setar uma fun??o f(x), fazemos escrevendo f(x) = fun??o   (espa?o entre o = f(x) e a fun??o ? importante)
-exemplo:
+[texto]
+É possível definir uma função na forma f(x) = "expressão" e, posteriormente, executar o comando Plot f.
+Exemplo:
 [/texto]
 
 [caixac]
@@ -94,7 +93,7 @@ gnuplot> gnuplot> plot f(x)
 
 [img][site]/polls/static/assets/images/plotb213.png[/img] 
 
-[titulo]algumas fun??es internas[/titulo]
+[titulo]algumas funções internas[/titulo]
 
 [texto]      __________________________________________________________
 Function            Returns
@@ -105,25 +104,25 @@ asin(x)           arc-seno    de x
 atan(x)           arc-tangente de x
 cos(x)            cosseno      de x,  x em radianos.
 cosh(x)           cosseno hyperbolico de x, x em radianos
-erf(x)            fun??o erro de x
-exp(x)            fun??o exponencial de x, base e
-inverf(x)         fun??o inversa do erro de x
-invnorm(x)        fun??o inversa da distribui??o de x
+erf(x)            função erro de x
+exp(x)            função exponencial de x, base e
+inverf(x)         função inversa do erro de x
+invnorm(x)        função inversa da distribuição de x
 log(x)            log de x, base e
 log10(x)          log de x, base 10
-norm(x)           distrui??o gaussiana normal
-rand(x)           gerador de n?meros pseudo-aleatorios      
+norm(x)           distribuição gaussiana normal
+rand(x)           gerador de n?meros pseudo aleatórios      
 sgn(x)            1 se x &gt; 0, -1 se x &lt; 0, 0 se x=0
 sin(x)            seno      de x, x em radianos
-sinh(x)           seno hyperbolico de x, x em radianos
+sinh(x)           seno hiperbólico de x, x em radianos
 sqrt(x)           raiz quadrada de x
 tan(x)            tangente de x, x em radianos
-tanh(x)           tangente  hyperbolico de x, x em radianos
+tanh(x)           tangente  hiperbólico de x, x em radianos
 ___________________________________________________________
-Bessel, gamma, ibeta, igamma, e lgamma tamb?m s?o supportados.  
-Muitas dessas fun??es aceitam argumentos complexos.
-Binarios e logicos tamb?m s?o aceitos.  
-(obs: elevado deve ser feito com ** n?o com ^)
+Bessel, gamma, ibeta, igamma, e lgamma também são suportados.  
+Muitas dessas funções aceitam argumentos complexos.
+Binários e lógicos também são aceitos.  
+(obs: elevado deve ser feito com ** não com ^)
 [/texto]
 
 
