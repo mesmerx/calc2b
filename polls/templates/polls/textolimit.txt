@@ -1,1 +1,37 @@
 [titulo] limitações[/titulo]
+
+[texto]
+O gnuplot tem algumas limitações internas, por questões de como o programa é feito, mesmo que o Gnuplot seja uma ferramenta poderosíssima devemos frisar suas capacidades de forma clara
+[/texto]
+
+[titulo] quando usar gnuplot?[/titulo]
+[texto]
+o gnuplot deve ser usado 
+
+• quando temos uma malha (serie de dados) conhecida, muito útil para dados vindo de experimentos
+• quando temos uma função da forma explicita (ex: f(x)=x )
+• quando não precisamos nos preocupar com derivações ou integrais
+[/texto]
+
+[titulo] quando não usar gnuplot?[/titulo]
+[texto]
+o gnuplot não deve ser usado 
+
+• quando temos que guardar os dados, o gnuplot NÃO guarda dados, ele gera a malha somente ao construir o gráfico e no momento seguinte a malha não existe mais
+• quando temos uma função da forma implícita (ex: 3*sin(x)*y**3=4 ), para uma funçãod esse modo temos que utilizar as curvas de nivel, transformando a função de 3*sin(x)*y**3=4 para 3*sin(x)*y**3-4
+[/texto]
+
+[caixac]
+splot 3*sin(x)*y**3-4
+[/caixac]
+
+[img]
+[site]/polls/static/assets/images/limit1.png
+[/img]
+[texto]
+
+• quando precisamos de derivadas ou integrais, para isso vamos usar outros programas (muitas vezes programas que usam gnuplot como base) para o trabalho 
+[/texto]
+
+
+

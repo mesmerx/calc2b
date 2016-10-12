@@ -1,14 +1,14 @@
 
- [texto]   Utilizaremos abordagens parecidas com plotagem em R² se não está familiarizado com ela olhe <a href="{% url 'gnuplotdoiseixos' %}">plotar uma função em R²</a>, não veremos como suavizar ou deixar esse grafico mais "bonito" isso está na sessão avançada"
+ [texto]   Utilizaremos abordagens parecidas com plotagem em R² se não está familiarizado com ela olhe sessão de como plotar uma função em R² (bi dimensional) , não veremos como suavizar ou deixar esse gráfico mais "bonito" nessa primeira visão do programa, isso estará na parte de recursos, junto com outras ferramentas validas 
 [/texto]
 
-[titulo]Plotagem direta[/titulo]
+[titulo]Gráficos (Superfícies com definição explícita)[/titulo]
 
 [texto]
-    Aqui com plotagem direta queremos dizer plotagem de uma função definita diretamente, mais a frente vamos aprender a gerar uma variavel e nessa variavel fazer a protagem 
+    Aqui com Gráficos queremos dizer uma representação de uma função definida diretamente, mais a frente vamos aprender a gerar uma variável e nessa variável fazer essa mesma representação 
 [/texto]
 
-[texto]dentro do GNUPLOT rode <br>
+[texto]dentro do GNUPLOT execute 
 
 [/texto]
 
@@ -26,11 +26,11 @@ por exemplo:
     [texto]gnuplot> splot sin(x) [/texto]
     [/caixac]
   
-(obs: tem q ser em ingles se for usar função senoidal)
+(obs: tem q ser em inglês se for usar função senoidal)
 [titulo]Resultado:[/titulo]
 [img][site]/polls/static/assets/images/plotb311.png[/img] 
 
-[texto]Claro como estamos em R³ podemos usar mais variaveis nesse grafico <br>
+[texto]Claro como estamos em R³ podemos usar mais variáveis nesse gráfico <br>
 
 [/texto]
 por exemplo:
@@ -41,15 +41,15 @@ por exemplo:
     [texto]gnuplot> splot sin(x*y) [/texto]
     [/caixac]
   
-(obs: tem q ser em ingles se for usar função senoidal)
+(obs: tem q ser em inglês se for usar função senoidal)
 [titulo]Resultado:[/titulo]
 [img][site]/polls/static/assets/images/plotb312.png[/img] 
 [/texto]
 
 [/texto]
-esse grafico está claramente ruim, e deve ser melhorado mais a frente
+esse gráfico está claramente ruim, e deve ser melhorado mais a frente
 [/texto]
-[titulo]Ajeitando o grafico (basico)[/titulo]
+[titulo]Ajeitando o gráfico (básico)[/titulo]
 
 [texto]
 Os eixos X, Y e Z são ajeitados de maneira similar ao em R² usando <code>xrange</code> , <code>yrange</code> e <code>zrange</code>
@@ -66,7 +66,7 @@ gnuplot> set zrange[min:max] [/texto]
   
 
 
-por exemplo:
+Por exemplo:
 
 
   
@@ -78,16 +78,16 @@ gnuplot> gnuplot> splot sin(x*y) [/texto]
     [/caixac]
   
   
-gera
+Gera
 
 [img][site]/polls/static/assets/images/plotb313.png[/img] 
 
 
-perceba que esse grafico está muito mais bonito, por mais que ainda deva ter mudanças
+Perceba que esse gráfico está muito mais bonito, por mais que ainda deva ter mudanças
 
 [titulo]Definir funções[/titulo]
 
-[texto]a definição de funções ocorre muito parecida com a em R², porem agora podemos utilizar sem definir explicitamente as variaveis x e y (obs: xy=/=x*y, xy não é entendido, pois xy é uma variavel nova, x*y é entendido como X vezes Y) [/texto]
+[texto]a definição de funções ocorre muito parecida com a em R², porem agora podemos utilizar sem definir explicitamente as variáveis x e y (obs: xy=/=x*y, xy não é entendido, pois xy é uma variável nova, x*y é entendido como X vezes Y) [/texto]
 
   
     [caixac]
@@ -99,7 +99,7 @@ perceba que esse grafico está muito mais bonito, por mais que ainda deva ter mu
 
 [img][site]/polls/static/assets/images/plotb314.png[/img] 
 
-perceba que podemos utilizar funções como no caso de r²
+Perceba que podemos utilizar funções como no caso de r² (bi dimensional)
 
 
   

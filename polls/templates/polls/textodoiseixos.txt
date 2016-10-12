@@ -7,8 +7,8 @@ Gráficos
 [/titulo]
 
 [texto]
-Existem duas formas, basicamente, de plotar o gráfico de uma função. No primeiro caso (que faremos agora) o comando "plot" vem seguido da expressão algébrica  que define a função. No segundo caso (apresentado depois) atribuímos a função é descrita como $f(x) = "fórmula", e a partir de então, o comando plot  se refere à f. 
-Dentro do GNUPLOT rode 
+Existem duas formas, basicamente, de plotar o gráfico de uma função. No primeiro caso (que faremos agora) o comando "plot" vem seguido da expressão algébrica  que define a função. No segundo caso (apresentado depois) é feita uma atribuição na forma f(x) = "fórmula", e a partir de então, o comando plot  se refere à f. 
+Dentro do GNUPLOT execute 
 
 [/texto]
 
@@ -37,6 +37,25 @@ Resultado:
 [img]
 [site]/polls/static/assets/images/plotb211.png
 [/img]
+
+[texto]
+se quiser fazer mais gráficos utilizando o mesmo sistema de eixos pode-se utilizar virgula no comando "plot"
+[texto]
+
+
+[caixac]
+gnuplot > plot exp(x),exp(2*x),exp(3*x)
+[/caixac]
+
+[texto]obs: exp(2*x) = e**2x[/texto]
+
+
+[img]
+[site]/polls/static/assets/images/limit2.png
+[/img]
+
+
+
 
 [titulo]
 Ajustando Domínio e Imagem
