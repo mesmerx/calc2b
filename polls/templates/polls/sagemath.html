@@ -1,9 +1,10 @@
 {% extends "polls/index.html" %}
 {% block content %}
 {% load staticfiles %}
-<div>
-    Estamos trabalhando no conteúdo sobre o Sage Math
-</div>
-    {% block content2 %}{% endblock %}
+{% load htmltags %}
+    {% block content2 %}
+    {{ "sagemath.txt"|ler|html|safe}}
+    
+    {% endblock %}
   {% endblock %}
 
