@@ -40,14 +40,14 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'livesync',
+    #'livesync',
     'django.contrib.staticfiles',
     'polls.templatetags.htmltags',
     ]
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
-    'livesync.core.middleware.DjangoLiveSyncMiddleware',
+    #'livesync.core.middleware.DjangoLiveSyncMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
