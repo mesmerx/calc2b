@@ -1,0 +1,4 @@
+[titulo]Instalação[/titulo]
+[texto]
+Para instalar no linux podemos ir pelo Site official [link=http://sagemath.c3sl.ufpr.br/index.html][/link]Sagemath[/ref] e baixar o .dmg
+ou baixar pelo [link=http://sagemath.c3sl.ufpr.br/osx/intel/sage-8.0-OSX_10.12.6-x86_64.dmg][/link]link direto[/ref] e instalar pelo DMG baixado, só clicar e continuar normalmente

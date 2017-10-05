@@ -20,5 +20,8 @@ urlpatterns = [
     url(r'^gnuplot/repeticoes$', views.gnuplotrepeticoes, name='gnuplotrepeticoes'),
     url(r'^gnuplot/macros$', views.gnuplotmacros, name='gnuplotmacros'),
     url(r'^gnuplot/arquivos$', views.gnuplotarquivos, name='gnuplotarquivos'),
+    url(r'^sagemath/windows$', views.sagewindows, name='sagewindows'),
+    url(r'^sagemath/linux$', views.sagelinux, name='sagelinux'),
+    url(r'^sagemath/mac$', views.sagemac, name='sagemac'),
 ]
 

@@ -1,0 +1,7 @@
+{% extends "polls/sagemath.html" %}
+{% block content2 %}
+{% load staticfiles %}
+{% load htmltags %}
+{{ "sagemathmac.txt"|ler|html|safe}}
+{% endblock %}
+

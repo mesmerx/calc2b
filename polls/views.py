@@ -38,3 +38,9 @@ def gnuplotarquivos(request):
 
 def sagemath(request):
     return render(request, 'polls/sagemath.html')
+def sagewindows(request):
+    return render(request, 'polls/sagemathwindows.html')
+def sagelinux(request):
+    return render(request, 'polls/sagemathlinux.html')
+def sagemac(request):
+    return render(request, 'polls/sagemathmac.html')

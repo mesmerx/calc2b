@@ -1,3 +1,18 @@
 [titulo]
-O que é [link="http://www.sagemath.org/pt/"]SageMath[\link] ?
+O que é [link=http://www.sagemath.org/pt/][/link]SageMath[/ref] ?
 [/titulo]
+[titulo]
+[texto]
+SageMath é um software matemático livre e de código aberto (open-source), desenvolvido sob a licença GPL por uma comunidade de programadores e matemáticos, que busca ser uma alternativa para os principais sistemas proprietários de software matemático como o Magma, Maple, Mathematica e Matlab. Ele engloba e se utiliza de um grande número de pacotes pré-existentes como Maxima, GAP, Pari/GP, softwares de renderização de imagens e muitos outros, integrando-os em uma interface única que busca ser amigável e de fácil assimilação. 
+Todos os principais pacotes são instalados juntamente com o SageMath e muitos outros pacotes existem para extensões em áreas específicas. Por este motivo SageMath é adequado para uso em ensino e pesquisa. SageMath pode ser utilizado por meio de comandos de linhas interativos ou de um Notebook, uma interface acionada de dentro de um browser onde os passos são armazenados em páginas separadas por usuário. Este Notebook pode estar conectado à instalação local do software ou remotamente por meio de rede e internet e permite a criação de gráficos e expressões matemáticas bem renderizadas que podem ser reutilizados, ampliados ou excluídos, e partilhados com outros usuários através da rede.
+
+Uma das vantagens evidentes de se utilizar software livre é a garantia de que qualquer outro pesquisador ou estudante que receba páginas de SageMath será capaz de exibí-las e manipulá-las sem a necessidade de aquisição de software proprietário. Além disto qualquer pessoa interessada poderá investigar, e alterar se necessário, o código fonte, situação bem diversa do que ocorre com o software proprietário onde o usuário desconhece os algoritmos usados pelo programa.
+[/texto]
+[menu]
+[submenu]
+[submenutitulo]instalação[/submenutitulo]
+[listap=sagemath/windows][/listap]windows[/sublista] 
+[listap=sagemath/linux][/listap]linux[/sublista]
+[listap=sagemath/mac][/listap]Mac OSX[/sublista]
+[/submenu]
+[/menu] 

@@ -1,0 +1,6 @@
+[titulo]Instalação[/titulo]
+[texto]
+Para instalar no Windows baixe o arquivo do site official[link=http://sagemath.c3sl.ufpr.br/index.html][/link]Sagemath[/ref]
+ou pode baixar direto por esse link [link=http://sagemath.c3sl.ufpr.br/win/old/index.html][/link]link direto[/ref]
+
+a instalação é comum a qualquer outro programa do windows , só ir em continue até terminar
