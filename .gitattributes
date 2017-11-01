@@ -1,1 +1,3 @@
-*.rb linguist-language=Python
+
+special-vendored-path/* linguist-vendored
+*.js linguist-vendored=false
